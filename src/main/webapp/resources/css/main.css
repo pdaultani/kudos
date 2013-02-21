@@ -1,0 +1,76 @@
+@CHARSET "UTF-8";
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	color: #4F4F4F;
+}
+
+#header {
+	background-color:#eee;
+	height: 50px;
+	padding: 10px;
+}
+
+.left_div {
+	float:left;
+}
+
+.right_div {
+	float:right;
+	font-size:12px;
+	margin-top:20px;
+	
+}
+
+#sidebar {
+	float: left;
+	width: 170px;
+	padding: 10px;
+	background-color:#eee;
+	margin-top:20px;
+}
+
+#navigation {font-size:14px;color: #4F4F4F;}
+#navigation ul {margin:0; padding:0;}
+#navigation li {list-style: none;}
+#navigation a {color: #6E6E6E;}
+    
+    
+body#home a#my_team,
+body#send_kudos_link a#send_kudos_link
+{
+	text-decoration:none;
+	font-weight:bold;
+}
+
+#send_kudos{
+	width:400px;
+	padding:10px;
+
+	float:left;
+}
+
+#content{
+	padding:20px;
+	margin-left:200px;
+	font-size:12px;
+	text-indent:10px;
+}
+
+table td{
+	font-size:14px;
+	border: 1px solid grey;
+}
+
+table th{
+	font-size:14px;
+}
+.kudos_content{
+	border: 1px solid grey;
+}
+#kudos_sent{
+	background: #C3E0F5;
+   border: 1px dashed #C39C4E;
+ 
+}
