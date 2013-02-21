@@ -3,11 +3,13 @@
 <html>
 <head>
 	<title>Kudos - Expedia</title>
+	<link rel="stylesheet" href="<c:url value="resources/css/sunny/jquery-ui-1.10.1.custom.css"/>"/>
+	
 	<link rel="stylesheet" href="<c:url value="resources/css/main.css"/>"/>
-	<link rel="stylesheet" href="<c:url value="resources/css/jquery-ui.css"/>"/>
-
+	
 	<script type="text/javascript" src="/lux/resources/js/jquery-1.9.1.js"></script>
-	<script type="text/javascript" src="/lux/resources/js/jquery-ui.js"></script>
+	
+	<script type="text/javascript" src="/lux/resources/js/jquery-ui-1.10.1.custom.js"></script>
 	
 	
 	
@@ -19,23 +21,24 @@
 	
 </head>
 <body id="home">
+
+<div id="wrapper">
 <div id="header">
 	<div class="left_div"><h2> Kudos  </h2></div>	
 	<div class="right_div"><h2> Welcome ${username}! </h2></div>
 	
 </div>
-<div id="wrapper">
-
-	<div id="sidebar">
-	<ul id="menu">
+	<div id="content" style="clear:both;width:900px;">
 	
-		<li><a href="<c:url value="/" />" id="my_team">My team</a></li>
-		<li><a href="<c:url value="/send_kudos" />" id="send_kudos_link">Send Kudos</a></li>
-		<li><a href="<c:url value="/download" />" id="download_kudos">Download</a></li>
-		
-	</ul>
+	<div id="sidebar">
+		<ul id="menu">
+			<li><a href="<c:url value="/" />" id="my_team">My team</a></li>
+			<li><a href="<c:url value="/send_kudos" />" id="send_kudos_link">Send Kudos</a></li>
+			<li><a href="<c:url value="/" />" id="download_kudos">Download</a></li>
+	
+		</ul>
 	</div>
-	<div id="content">
+	<br/>
 		<h3>Listing kudos sent and received in your team.</h3>
 		<table class="kudos_content">
 			<th>Kudos sent from</th>
