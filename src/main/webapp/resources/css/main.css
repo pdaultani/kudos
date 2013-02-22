@@ -63,14 +63,6 @@ body#send_kudos_link a#send_kudos_link
 	background:white;
 }
 
-table td{
-	font-size:14px;
-	border: 1px solid grey;
-}
-
-table th{
-	font-size:14px;
-}
 .kudos_content{
 	border: 1px solid grey;
 }
@@ -79,4 +71,28 @@ table th{
   display:block;
   content:"";
   clear:both;
+}
+
+table.kudos_content {
+	border-width:1px;
+	font-size:11px;
+	font-family: verdana,arial,sans-serif;
+	color:#333333;
+	border-color: #666666;
+	border-collapse: collapse;
+	width:650px;
+}
+table.kudos_content th {
+	border-width:1px;
+	padding: 5px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+table.kudos_content td {
+	border-width:1px;
+	padding: 5px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
 }

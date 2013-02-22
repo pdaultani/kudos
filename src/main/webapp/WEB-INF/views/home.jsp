@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href="<c:url value="resources/css/main.css"/>"/>
 	
 	<script type="text/javascript" src="/lux/resources/js/jquery-1.9.1.js"></script>
-	
 	<script type="text/javascript" src="/lux/resources/js/jquery-ui-1.10.1.custom.js"></script>
 	
 	
@@ -16,8 +15,10 @@
 	<script>
 	$(function() {
 		$("#menu").menu();
+		
 	});
-	</script>
+	
+		</script>
 	
 </head>
 <body id="home">
@@ -34,19 +35,20 @@
 		<ul id="menu">
 			<li><a href="<c:url value="/" />" id="my_team">My team</a></li>
 			<li><a href="<c:url value="/send_kudos" />" id="send_kudos_link">Send Kudos</a></li>
-			<li><a href="<c:url value="/" />" id="download_kudos">Download</a></li>
+			<li><a href="<c:url value="/download_kudos_pdf" />" id="download_kudos">Download</a></li>
 	
 		</ul>
 	</div>
 	<br/>
 		<h3>Listing kudos sent and received in your team.</h3>
-		<table class="kudos_content">
+		<table class="kudos_content" id="kudos_table">
+		<thead>
 			<th>Kudos sent from</th>
 			<th>Kudos sent to </th>
 			<th>Content</th>
 			<th>Manager Name</th>
 			<th>Date sent</th>
-			
+		</thead>
 		<c:forEach items="${kudos}" var="k">
 		<tr>
 			<c:forEach items="${k.getUsers()}" var="u">

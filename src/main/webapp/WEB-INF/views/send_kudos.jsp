@@ -56,7 +56,7 @@ function send_kudos() {
 		<ul id="menu">
 			<li><a href="<c:url value="/" />" id="my_team">My team</a></li>
 			<li><a href="<c:url value="/send_kudos" />" id="send_kudos_link">Send Kudos</a></li>
-			<li><a href="<c:url value="/" />" id="download_kudos">Download</a></li>
+			<li><a href="<c:url value="/download_kudos_pdf" />" id="download_kudos">Download</a></li>
 	
 		</ul>
 	</div>

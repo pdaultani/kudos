@@ -13,6 +13,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -66,4 +68,11 @@ public class HomeController {
 		return "home";
 	}
 	
+	@RequestMapping(value="/download_kudos_pdf")
+	public ModelAndView showPDF() {
+		User user = userService.getUser(1);	
+		List<KudosData> kudos = kudosDataService.getAll(user.getId());
+			
+	        return new ModelAndView("HelloWorldPdfView", "kudos", kudos);
+	}     
 }
