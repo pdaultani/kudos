@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.expedia.lux.dao.KudosDataService;
+import com.expedia.lux.dao.KudosMailService;
 import com.expedia.lux.dao.UserService;
 import com.expedia.lux.model.User;
 
@@ -55,6 +56,15 @@ private KudosDataService kudosDataService;
 		// Delegate to service to do the actual saving to db later on. and also emailing it out. 
 		kudosDataService.add(kudos_sent_to,kudos_sent_from,kudos_content);
 		
+		ApplicationContext context =  new ClassPathXmlApplicationContext("mail-config.xml");
+	     String kudos_email_text = kudos_sent_from + " has sent kudos to you! \r\r";
+	    	KudosMailService km = (KudosMailService) context.getBean("KudosMailService");
+	        km.sendMail("from@kudos.com",
+	    		   kudos_sent_to + "@expedia.com",
+	    		   "Kudos sent to you!", 
+	    		   kudos_email_text + kudos_content.toString());
+	 
+	        
 		String confirm = "Kudos sent!";
 		
 		// @ResponseBody will automatically convert the returned value into JSON format
